@@ -24,5 +24,6 @@ jobs:
         with:
           dotnet-version: '10.0.x'
       - run: python python/tools/restore_demo_videos.py --verify
+      - run: python -m pip install -r python/requirements-dev.txt
       - shell: pwsh
         run: .\scripts\Quick-Engine-Gate-Windows.ps1
