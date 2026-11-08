@@ -59,14 +59,14 @@ def test_oracle_is_41_legal_moves_with_black_winner():
 
 
 def test_video_metadata_and_moves_are_hashed_and_explicitly_synthetic():
-    meta=json.loads((DEMO/'manifest.json').read_text())
+    meta=json.loads((DEMO/'manifest.json').read_text(encoding='utf-8'))
     assert meta['frame_count']==961 and meta['fps']==30
     assert meta['side_by_side_frame_count']==961 and meta['side_by_side_fps']==60
     for path,key in ((DEMO/'full_game_961.mp4','video_sha256'),
                      (DEMO/'full_game_synced_961_2x.mp4','side_by_side_2x_sha256')):
         assert hashlib.sha256(path.read_bytes()).hexdigest()==meta[key]
     assert hashlib.sha256((RESULT/'moves.csv').read_bytes()).hexdigest()==meta['moves_sha256']
-    summary=json.loads((RESULT/'summary.json').read_text())
+    summary=json.loads((RESULT/'summary.json').read_text(encoding='utf-8'))
     assert summary['engine']=='synthetic-oracle'
     assert summary['original_video_redistributed'] is False
     assert 'NOT model inference' in summary['accuracy_note']
@@ -74,7 +74,7 @@ def test_video_metadata_and_moves_are_hashed_and_explicitly_synthetic():
 
 def test_wpf_two_buttons_use_same_monotonic_timeline():
     root=ET.parse(ROOT/'csharp/GomokuVision.Desktop/MainWindow.xaml').getroot()
-    code=(ROOT/'csharp/GomokuVision.Desktop/MainWindow.xaml.cs').read_text()
+    code=(ROOT/'csharp/GomokuVision.Desktop/MainWindow.xaml.cs').read_text(encoding='utf-8')
     controls={el.attrib.get('{http://schemas.microsoft.com/winfx/2006/xaml}Name'):el
               for el in root.iter()}
     assert controls['SpeedBox'].attrib['SelectionChanged']=='SpeedBox_SelectionChanged'
@@ -97,12 +97,12 @@ def test_third_matlab_engine_is_real_process_not_python_wrapper():
               for el in root.iter()}
     options=[e.attrib.get('Content') for e in controls['EngineBox']]
     assert len(options)==3 and 'MATLAB' in options[2]
-    code=(ROOT/'csharp/GomokuVision.Desktop/MainWindow.xaml.cs').read_text()
+    code=(ROOT/'csharp/GomokuVision.Desktop/MainWindow.xaml.cs').read_text(encoding='utf-8')
     assert '_matlabRunning=EngineBox.SelectedIndex==2;' in code
     assert 'else if (_matlabRunning) await RunMatlabAsync(opts);' in code
     assert 'psi.ArgumentList.Add("-batch");' in code
     assert 'GOMOKUVISION_MATLAB_EXE' in code
-    m=(ROOT/'matlab/modern/gomoku_batch.m').read_text()
+    m=(ROOT/'matlab/modern/gomoku_batch.m').read_text(encoding='utf-8')
     assert 'VideoReader(' in m and 'normxcorr2(' in m and 'VideoWriter(' in m
     assert 'writetable(result,' in m and "'summary.json'" in m
     assert 'python' not in m.lower().replace('no python','')
@@ -119,7 +119,7 @@ def test_video_and_board_share_frame_25_jump():
 
 
 def test_side_by_side_can_be_manually_selected_without_wrong_speed_pairing():
-    code=(ROOT/'csharp/GomokuVision.Desktop/MainWindow.xaml.cs').read_text()
+    code=(ROOT/'csharp/GomokuVision.Desktop/MainWindow.xaml.cs').read_text(encoding='utf-8')
     assert 'BundledSyncedTwoXVideoSha256' in code
     assert 'if (fingerprint==BundledSyncedTwoXVideoSha256)' in code
     assert 'SpeedBox.SelectedIndex=0;' in code
