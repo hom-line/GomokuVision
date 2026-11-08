@@ -13,7 +13,7 @@
 
 ## 原生引擎驗收
 
-執行 `Run-Legacy-Modes-Windows.bat`：產生 Python 與 C# 在 2 種 ROI × 2 種畫面模式上的 8 組短片分析結果，分別以既知 9 手正解驗證及跨語言比較，不分析私人 961 幀原始攝影影片。若有 MATLAB，額外傳入 `-IncludeMatlab`，再以 MATLAB 原生程式產生 4 組並跟 Python 比對。結果存 `%LOCALAPPDATA%\GomokuVision\Gates\legacy-modes-*`，只在最後全部通過時顯示 `V036_LEGACY_MODES_PASS`。
+執行 `scripts/Run-Legacy-Modes-Windows.bat`：產生 Python 與 C# 在 2 種 ROI × 2 種畫面模式上的 8 組短片分析結果，分別以既知 9 手正解驗證及跨語言比較，不分析私人 961 幀原始攝影影片。若有 MATLAB，額外傳入 `-IncludeMatlab`，再以 MATLAB 原生程式產生 4 組並跟 Python 比對。結果存 `%LOCALAPPDATA%\GomokuVision\Gates\legacy-modes-*`，只在最後全部通過時顯示 `V036_LEGACY_MODES_PASS`。
 
 若要完成新版本**完整 41 手的三引擎實測**，每個引擎以獨立資料夾重跑 `demo/full_game/full_game_961.mp4`，檢查棋色與落點 41/41、三引擎的 `roi_mode`、`overlay_mode`、`moves.csv`、`summary.json` 與進度圖片。共用 ROI 的匹配嘗試數可能更多，不應假設一定更快。
 

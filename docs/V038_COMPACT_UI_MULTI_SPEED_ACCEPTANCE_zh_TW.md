@@ -32,10 +32,10 @@
 - `benchmark-meta.json`：原始影片 SHA-256、選取倍率、來源 FPS、總影格與測試範圍。
 - `status.json`：執行進度與每組結果；還有各案例 `console.log`。
 
-只測 Python 或操作命令列時可執行根目錄 `Run-Selected-Speeds-Windows.bat`，未指定參數預設 1×，或從 CMD 輸入：
+只測 Python 或操作命令列時可執行根目錄 `scripts/Run-Selected-Speeds-Windows.bat`，未指定參數預設 1×，或從 CMD 輸入：
 
 ```bat
-Run-Selected-Speeds-Windows.bat 1 2 4
+scripts/Run-Selected-Speeds-Windows.bat 1 2 4
 ```
 
 也可以直接呼叫 `python/tools/run_full_benchmark.py --playback-speeds 1 4`，其它必要參數參考根目錄批次檔。

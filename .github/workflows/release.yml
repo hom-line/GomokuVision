@@ -21,13 +21,13 @@ jobs:
       - name: Confirm tested commit is current
         if: github.event_name == 'workflow_run'
         env:
-          CI_SHA: \${{ github.event.workflow_run.head_sha }}
+          CI_SHA: ${{ github.event.workflow_run.head_sha }}
         run: |
           test "$(git rev-parse HEAD)" = "$CI_SHA" || { echo "CI commit no longer matches main"; exit 1; }
       - name: Check the existing Release and attachments
         id: existing
         env:
-          GH_TOKEN: \${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh release view GomokuVision --repo "$GITHUB_REPOSITORY" >/dev/null
           names="$(gh release view GomokuVision --repo "$GITHUB_REPOSITORY" --json assets --jq '[.assets[].name] | join(" ")')"
@@ -70,7 +70,7 @@ jobs:
       - name: Upload archive to the existing Release
         if: steps.existing.outputs.skip != 'true'
         env:
-          GH_TOKEN: \${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh release upload GomokuVision \
             "$RUNNER_TEMP/gomoku-release/GomokuVision_v0.3.9_Source.zip" \
@@ -80,9 +80,18 @@ jobs:
             --title "GomokuVision" \
             --notes-file "docs/releases/RELEASE_NOTES_v0.3.9.md" \
             --prerelease=false
+      - name: Align existing Release tag with the verified source commit
+        if: steps.existing.outputs.skip != 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          head="$(git rev-parse HEAD)"
+          gh api -X PATCH "repos/$GITHUB_REPOSITORY/git/refs/tags/GomokuVision" -f "sha=$head" -F "force=true" >/dev/null
+          actual="$(gh api "repos/$GITHUB_REPOSITORY/git/ref/tags/GomokuVision" --jq ".object.sha")"
+          test "$actual" = "$head" || { echo "RELEASE_TAG_MISMATCH"; exit 1; }
       - name: Verify remote download attachment names
         env:
-          GH_TOKEN: \${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           names="$(gh release view GomokuVision --repo "$GITHUB_REPOSITORY" --json assets --jq '[.assets[].name] | join(" ")')"
           [[ "$names" == *"GomokuVision_v0.3.9_Source.zip"* ]] || { echo "ZIP_ASSET_MISSING"; exit 1; }

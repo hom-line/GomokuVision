@@ -18,4 +18,4 @@
 - MATLAB starts a fresh licensed process for each case in this test. The difference between process/pipeline timings is *external overhead*, including launch and shutdown; do not assign all overhead to startup alone.
 - The three implementations have different accounting for NCC attempts; direct engine efficiency claims require matching units and workloads.
 - Playback endpoint checks in the benchmark are mathematical, not a WPF or browser interactive acceptance test.
-- Windows runtime evidence is reported by the maintainer; independently rerun using `Run-Selected-Speeds-Windows.bat` on a licensed test machine.
+- Windows runtime evidence is reported by the maintainer; independently rerun using `scripts/Run-Selected-Speeds-Windows.bat` on a licensed test machine.

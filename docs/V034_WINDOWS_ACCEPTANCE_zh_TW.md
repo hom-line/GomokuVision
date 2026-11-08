@@ -27,8 +27,8 @@
 ## 一鍵驗收入口
 
 - `Quick-Engine-Gate-Windows.bat`：原有 Python／C# **短 9 手**測試及 WPF Release 編譯。
-- `Run-Three-Engine-QuickGate-Windows.bat`：Python + C# + 真正的 MATLAB 短 9 手驗收。需要本機具有 MATLAB 授權與 Image Processing Toolbox；未安裝應回報缺少而不是 PASS。
-- `Run-MATLAB-961-Gate-Windows.bat`：以自製 961 幀完整棋局直接啟動 MATLAB，與 41 手正解比較，記錄完整 MATLAB 原生耗時與日誌。此項會重新做**合成影片**辨識，可能比 Python 慢，不會碰原始第三方影片。
+- `scripts/Run-Three-Engine-QuickGate-Windows.bat`：Python + C# + 真正的 MATLAB 短 9 手驗收。需要本機具有 MATLAB 授權與 Image Processing Toolbox；未安裝應回報缺少而不是 PASS。
+- `scripts/Run-MATLAB-961-Gate-Windows.bat`：以自製 961 幀完整棋局直接啟動 MATLAB，與 41 手正解比較，記錄完整 MATLAB 原生耗時與日誌。此項會重新做**合成影片**辨識，可能比 Python 慢，不會碰原始第三方影片。
 
 已保存的歷史 41 手資料與原始私人影片不在這些 gate 中重新計算。要測真正第三方影片，需在有合法權利的本機環境另外選取檔案。
 
