@@ -11,8 +11,8 @@ Updated: November 8, 2026.
 | Browser replay and synthetic video | **Not uploaded yet** |
 | GitHub Actions CI | **Not installed or verified yet** |
 | 2025 course contributors' redistribution rights | **Not confirmed** |
-| Third-party licensing notices | **Pending** |
-| Root open-source LICENSE | **Not selected** |
+| Third-party licensing notices | **Disclosed in THIRD_PARTY_NOTICES.md; upstream license terms still apply** |
+| Root open-source LICENSE | **MIT published** |
 | Initial release tag `v0.3.9` | **Not created** |
 
 **Important:** The current public repository is a staged project overview, not a complete source-code release or open-source license grant. Do not infer redistribution rights merely from GitHub visibility.
