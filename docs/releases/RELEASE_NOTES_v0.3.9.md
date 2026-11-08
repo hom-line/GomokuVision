@@ -2,7 +2,7 @@
 
 **2025 final course assignment → November 2026 modernization.**
 
-First planned public technical sharing release of a three-language Gomoku video recognition system, with MATLAB, Python and C# independent engines, Windows WPF, and a static browser-based synchronized replay for the self-generated synthetic game.
+First public technical sharing release of a three-language Gomoku video recognition system, with MATLAB, Python and C# independent engines, Windows WPF, and a static browser-based synchronized replay for the self-generated synthetic game.
 
 Highlights: two ROI modes, recognition/heuristic suggestion overlays, 961-frame/41-move synthetic sample, 1×/2×/4× synchronized replay, 12–36 case CSV export and explicit three-scope benchmarking methodology.
 
@@ -10,4 +10,4 @@ Highlights: two ROI modes, recognition/heuristic suggestion overlays, 961-frame/
 
 **Important limits:** The browser replay does *not* execute native recognition. Playback speed does not accelerate detector computations. Synthetic test pass rates are not real-world accuracy evidence. MATLAB requires separately licensed proprietary software. No original third-party video is bundled.
 
-The source license and all rights notices must be completed before this Release is published. This document is draft release text, not a published GitHub Release.
+The modern project-owned source and self-generated synthetic assets are MIT-licensed. The historical 2025 MATLAB course files and original third-party footage are excluded. MATLAB itself requires a separate proprietary license. This is a source distribution, not a prebuilt Windows installer.

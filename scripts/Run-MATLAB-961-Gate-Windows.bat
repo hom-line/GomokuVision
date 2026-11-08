@@ -1,6 +1,6 @@
 @echo off
 setlocal
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%~dp0scripts\Run-MATLAB-961-Gate-Windows.ps1"
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%~dp0Run-MATLAB-961-Gate-Windows.ps1"
 set "result=%ERRORLEVEL%"
 echo.
 if "%result%"=="0" (

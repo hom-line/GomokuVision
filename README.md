@@ -8,7 +8,7 @@ GomokuVision began as a **2025 university final course assignment** titled *Desi
 
 The project is shared for **educational use, technical exchange, and reproducible engineering experiments**. It is **not** a claim of commercial readiness or general real-world video recognition accuracy.
 
-[繁體中文 / Traditional Chinese](#繁體中文--traditional-chinese) · [Browser Replay](index.html) · [Windows benchmark evidence](docs/benchmarks/WINDOWS_V039_36_CASE_EVIDENCE.md) · [Timing methods](docs/benchmarks/TIMING_METHODS.md) · [Changelog](CHANGELOG.md)
+[繁體中文 / Traditional Chinese](#繁體中文--traditional-chinese) · [Browser Replay](index.html) · [Windows benchmark evidence](docs/benchmarks/WINDOWS_V039_36_CASE_EVIDENCE.md) · [Timing methods](docs/benchmarks/TIMING_METHODS.md) · [Download Release](https://github.com/hom-line/GomokuVision/releases/tag/GomokuVision) · [Changelog](CHANGELOG.md)
 
 ![Gomoku board with synthetic confirmed-piece overlays](docs/V036_Green_Box_Final_Frame.png)
 
@@ -36,7 +36,7 @@ The script verifies the original SHA-256 before placing each MP4 in `demo/full_g
 
 ## 📥 Download and quick start
 
-The first source-release baseline is **`v0.3.9`** (GitHub Release/tag is published separately). Repository and README titles intentionally remain just **GomokuVision**. For local validation, clone or extract the source archive and run:
+The first source-release baseline is **`v0.3.9`**, published under the existing [GomokuVision Release](https://github.com/hom-line/GomokuVision/releases/tag/GomokuVision). Repository and README titles remain just **GomokuVision**. For local validation, clone or extract the source archive and run:
 
 ```powershell
 .\scripts\Verify-WPF-Build-Windows.bat
@@ -81,6 +81,7 @@ GomokuVision/
 ├── demo/full_game/             Self-rendered synthetic inputs and videos
 ├── docs/benchmarks/            Sanitized Windows results and methods
 ├── scripts/                    Windows build / validation entry points
+├── docs/releases/              Release history, notes and publication documents
 └── .github/workflows/          Automated CI definition
 ```
 
@@ -93,7 +94,7 @@ python -m pip install -r python/requirements-dev.txt
 PYTHONPATH=python python -m pytest -q python/tests
 ```
 
-Windows full matrix: run `Run-Selected-Speeds-Windows.bat` and select one or more playback labels. GitHub Actions CI is configured, but should be considered unverified until its first run succeeds on the actual repository.
+Windows full matrix: run `scripts/Run-Selected-Speeds-Windows.bat` and select one or more playback labels. See live [GitHub Actions CI results](https://github.com/hom-line/GomokuVision/actions) for current Python and Windows verification.
 
 ## ⚖️ Licensing and sharing
 
@@ -164,7 +165,7 @@ Windows x64 安裝 .NET 10 SDK、Python 3.10+ 與所需套件，解壓專案後�
 
 **作者已確認現代版原始碼及自製素材權利，並同意依 MIT License 開源。** 第三方元件仍依各自授權；2025 年歷史 MATLAB 程式與原始第三方影片不在公開範圍。
 
-維護者：[`hom-line`](https://github.com/hom-line) · 原始專題：2025 年期末作業 · 現代化升級：2026 年 11 月。GitHub README 主標題只用 **GomokuVision**；`v0.3.9` 僅用於 Release Tag。
+維護者：[`hom-line`](https://github.com/hom-line) · 原始專題：2025 年期末作業 · 現代化升級：2026 年 11 月。GitHub README 主標題只用 **GomokuVision**；`v0.3.9` 是首次發布版本號，現有 GitHub Release 標籤為 `GomokuVision`。
 
 ## 授權
 

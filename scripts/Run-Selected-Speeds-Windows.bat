@@ -1,6 +1,6 @@
 @echo off
 setlocal
-cd /d "%~dp0"
+cd /d "%~dp0.."
 set "SPEEDS=%*"
 if "%SPEEDS%"=="" set "SPEEDS=1"
 for /f %%G in ('powershell -NoProfile -Command "Get-Date -Format yyyyMMdd-HHmmss"') do set "RUNID=%%G"
