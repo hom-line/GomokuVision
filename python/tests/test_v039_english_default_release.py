@@ -17,8 +17,10 @@ def test_default_english_and_chinese_available():
 def test_english_docs_and_public_evidence_are_deidentified():
     readme=(ROOT/"README.md").read_text(encoding="utf-8")
     assert readme.startswith("# GomokuVision")
-    assert 'English-first' in readme
-    assert '## 繁體中文 / Traditional Chinese' in readme
+    assert 'English by default / 預設英文' in readme
+    assert '## 📖 About / 專案簡介' in readme
+    assert '## 📥 Download / 下載專案' in readme
+    assert '## ⚖️ License / 授權與聲明' in readme
     assert (ROOT/"docs/PUBLICATION_READINESS.md").is_file()
     with (ROOT/"docs/benchmarks/windows_36_case_results_2026-11-08.csv").open(encoding="utf-8", newline="") as file:
         rows=list(csv.DictReader(file))
