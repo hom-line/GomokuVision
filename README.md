@@ -4,6 +4,8 @@
 
 **MATLAB · Python / OpenCV · C# / OpenCvSharp · Windows WPF · Web Replay**
 
+[![Python & Windows CI](https://github.com/hom-line/GomokuVision/actions/workflows/ci.yml/badge.svg)](https://github.com/hom-line/GomokuVision/actions/workflows/ci.yml)
+
 > ⭐ **Like this project? Give it a Star! / 如果這個專案對你有幫助，歡迎給予 Star 支持技術分享。**
 
 [**Download / 下載**](https://github.com/hom-line/GomokuVision/releases/tag/GomokuVision) · [**Quick Start / 快速開始**](#-quick-start--快速開始) · [**Web Replay / 網頁重播**](#-web-replay--網頁棋譜重播) · [**Benchmarks / 測試結果**](#-verified-benchmarks--實測結果) · [**License / 授權**](#-license--授權)
@@ -106,7 +108,7 @@ Each test uses the **same self-generated 961-frame video**, processes 161 sample
 
 **Fair timing / 公平計時：** Detection-core time excludes video decoding/encoding, overlays and startup; full-process time includes external overhead such as MATLAB initialization. These values average **one run per configuration**, not repeated independent trials. / 核心辨識時間不含影片讀寫、畫框及啟動成本；完整程序時間包含 MATLAB 初始化等額外開銷。每個設定只有一次測試，尚不是多輪獨立統計實驗。
 
-**Limitations / 限制：** Playback speeds **do not accelerate detector computation**, and passing a single synthetic game **does not establish real-world recognition accuracy**. / 1×／2×／4× **不會加速辨識運算**；單一合成棋局全數通過，**不代表真實場景辨識準確率為 100%**。
+**Limitations / 限制：** Playback speeds **do not accelerate detector computation**, and passing a single synthetic game **does not establish real-world recognition accuracy**. NCC match-attempt counters also use different accounting conventions across the three engines; core timing is not an equal-workload microbenchmark. / 1×／2×／4× **不會加速辨識運算**；單一合成棋局全數通過，**不代表真實場景辨識準確率為 100%**。 三語言 NCC 比對次數的統計口徑並不相同，核心耗時不可直接視為完全等工作量的微基準測試。
 
 [36-case CSV / 36 組明細](docs/benchmarks/windows_v039_36_case_results_2026-11-08.csv) · [Engine summary / 引擎平均](docs/benchmarks/windows_v039_engine_summary.csv) · [Evidence / 驗證說明](docs/benchmarks/WINDOWS_V039_36_CASE_EVIDENCE.md) · [Timing methodology / 計時方法](docs/benchmarks/TIMING_METHODS.md)
 
