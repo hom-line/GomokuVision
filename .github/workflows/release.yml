@@ -1,0 +1,90 @@
+name: GomokuVision — Verified Release Assets
+on:
+  workflow_run:
+    workflows: ["GomokuVision — Python and Windows gates"]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  publish:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'push')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+      - name: Confirm tested commit is current
+        if: github.event_name == 'workflow_run'
+        env:
+          CI_SHA: \${{ github.event.workflow_run.head_sha }}
+        run: |
+          test "$(git rev-parse HEAD)" = "$CI_SHA" || { echo "CI commit no longer matches main"; exit 1; }
+      - name: Check the existing Release and attachments
+        id: existing
+        env:
+          GH_TOKEN: \${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release view GomokuVision --repo "$GITHUB_REPOSITORY" >/dev/null
+          names="$(gh release view GomokuVision --repo "$GITHUB_REPOSITORY" --json assets --jq '[.assets[].name] | join(" ")')"
+          if [[ "$names" == *"GomokuVision_v0.3.9_Source.zip"* && "$names" == *"SHA256_GomokuVision_v0.3.9.txt"* ]]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            echo "Existing release download assets found."
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Restore synthetic demo videos and verify their SHA-256
+        if: steps.existing.outputs.skip != 'true'
+        run: python3 python/tools/restore_demo_videos.py --verify
+      - name: Build source ZIP and SHA-256
+        if: steps.existing.outputs.skip != 'true'
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib, os, zipfile
+          root = Path.cwd()
+          out = Path(os.environ["RUNNER_TEMP"]) / "gomoku-release"
+          out.mkdir(exist_ok=True)
+          archive = out / "GomokuVision_v0.3.9_Source.zip"
+          files = []
+          for path in root.rglob("*"):
+              if not path.is_file():
+                  continue
+              rel = path.relative_to(root)
+              parts = set(rel.parts)
+              if ".git" in parts or "__pycache__" in parts or ".pytest_cache" in parts or ".venv" in parts or "_release" in parts or path.suffix == ".pyc":
+                  continue
+              files.append((rel, path))
+          with zipfile.ZipFile(archive, "w", zipfile.ZIP_DEFLATED, compresslevel=6) as z:
+              for rel, path in sorted(files):
+                  z.write(path, "GomokuVision/" + rel.as_posix())
+          digest = hashlib.sha256(archive.read_bytes()).hexdigest()
+          (out / "SHA256_GomokuVision_v0.3.9.txt").write_text(f"{digest}  {archive.name}\n", encoding="utf-8")
+          print(f"RELEASE_ARCHIVE: {archive} ({archive.stat().st_size} bytes, {len(files)} files)")
+          print(f"SHA256: {digest}")
+          PY
+      - name: Upload archive to the existing Release
+        if: steps.existing.outputs.skip != 'true'
+        env:
+          GH_TOKEN: \${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release upload GomokuVision \
+            "$RUNNER_TEMP/gomoku-release/GomokuVision_v0.3.9_Source.zip" \
+            "$RUNNER_TEMP/gomoku-release/SHA256_GomokuVision_v0.3.9.txt" \
+            --repo "$GITHUB_REPOSITORY" --clobber
+          gh release edit GomokuVision --repo "$GITHUB_REPOSITORY" \
+            --title "GomokuVision" \
+            --notes-file "docs/releases/RELEASE_NOTES_v0.3.9.md" \
+            --prerelease=false
+      - name: Verify remote download attachment names
+        env:
+          GH_TOKEN: \${{ secrets.GITHUB_TOKEN }}
+        run: |
+          names="$(gh release view GomokuVision --repo "$GITHUB_REPOSITORY" --json assets --jq '[.assets[].name] | join(" ")')"
+          [[ "$names" == *"GomokuVision_v0.3.9_Source.zip"* ]] || { echo "ZIP_ASSET_MISSING"; exit 1; }
+          [[ "$names" == *"SHA256_GomokuVision_v0.3.9.txt"* ]] || { echo "SHA256_ASSET_MISSING"; exit 1; }
+          echo "GOMOKUVISION_RELEASE_ASSETS_VERIFIED: $names"
