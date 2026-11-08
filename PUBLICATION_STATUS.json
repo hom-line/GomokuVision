@@ -1,0 +1,15 @@
+{
+  "name": "GomokuVision",
+  "version": "v0.3.9",
+  "original_course_project_year": 2025,
+  "modernized_year": 2026,
+  "repository": "https://github.com/hom-line/GomokuVision",
+  "license": "MIT",
+  "license_author_approved": true,
+  "source_package_prepared": true,
+  "source_uploaded_to_github": "pending GitHub commit verification",
+  "release_tag_published": false,
+  "web_replay": "static synthetic reference",
+  "benchmark_windows_cases_passed": 36,
+  "browser_interactive_test": "pending"
+}

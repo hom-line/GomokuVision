@@ -1,0 +1,33 @@
+{
+  "project": "GomokuVision Advanced",
+  "version": "0.3.0",
+  "date": "2026-11-08",
+  "local_environment": "non-Windows Python 3 environment; no dotnet SDK available here",
+  "python_tests": {
+    "passed": 33,
+    "failed": 0
+  },
+  "python_synthetic_video": {
+    "moves": 9,
+    "oracle_matches": 9,
+    "winner": "Black"
+  },
+  "cached_historical_csv": {
+    "moves": 41,
+    "valid_board": true,
+    "not_independent_ground_truth": true
+  },
+  "xaml_xml_parse": "PASS",
+  "v030_source_event_contract": "PASS",
+  "windows_v026_user_evidence": {
+    "synthetic_gate_stages_passed": 11,
+    "total": 11,
+    "version": "0.2.6"
+  },
+  "windows_v030_csharp_build": "NOT_TESTED",
+  "windows_v030_wpf_build": "NOT_TESTED",
+  "windows_v030_gui_interaction": "NOT_TESTED",
+  "three_language_matlab_automatic_engine_test": "NOT_IMPLEMENTED",
+  "historical_961_frame_video_reprocessed": false,
+  "publication": "ZIP only; not uploaded to GitHub"
+}

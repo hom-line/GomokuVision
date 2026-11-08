@@ -1,0 +1,54 @@
+{
+  "project": "GomokuVision Advanced V0.3.3",
+  "date": "2026-11-08",
+  "synthetic_demo": {
+    "frame_count": 961,
+    "resolution": "720x720",
+    "fps": 30,
+    "frame_timeline_seconds": 32.033,
+    "default_wpf_speed": "2x",
+    "default_wpf_duration_seconds": 16.017,
+    "total_moves": 41,
+    "winner": "Black",
+    "video_sha256": "0518c8f5e0627e396ca1e4d5a9e0ff687008f8c90efe0b9ac91875c29c594641",
+    "reference": "self-authored synthetic board, moves sourced from saved 41-move CSV"
+  },
+  "synchronized_side_by_side": {
+    "frames": 961,
+    "resolution": "1230x690",
+    "fps": 60,
+    "duration_seconds": 16.017,
+    "frame_count_verified": true,
+    "self_authored": true,
+    "sha256": "62fd77ecfc2fa26f525ea9b55d1423834869d3a56e7d501b22c64ee6ce6b12c3"
+  },
+  "python_full_game_recognition": {
+    "status": "PASS",
+    "source_frames": 961,
+    "sampled_frames": 161,
+    "recognized_moves": 41,
+    "move_color_position_parity": "41/41",
+    "winner": "Black",
+    "confirmation_delay_frames": 6,
+    "accuracy_scope": "self-generated synthetic game only, not independent historical accuracy"
+  },
+  "python_source_tests": {
+    "status": "PASS",
+    "count": 52
+  },
+  "csharp_new_sync_code": {
+    "status": "SOURCE_INSPECTED_ONLY",
+    "windows_compilation_verified": false,
+    "previous_version_026_windows_gate": "11/11 PASS but not evidence for changed V033"
+  },
+  "matlab_native_engine": {
+    "status": "IMPLEMENTED_NOT_RUN",
+    "runtime_available_in_this_environment": false,
+    "requires": "licensed MATLAB + Image Processing Toolbox",
+    "independent_native_recognition": true,
+    "matlab_nine_move_gate": "WINDOWS_MATLAB_RUNTIME_PENDING"
+  },
+  "original_third_party_video_in_zip": false,
+  "original_41_move_csv_preserved": true,
+  "disclaimer": "Demo oracle is a predetermined move timeline, not AI prediction or proof of real-world recognition accuracy."
+}

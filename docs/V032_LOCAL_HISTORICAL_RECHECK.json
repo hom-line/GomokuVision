@@ -1,0 +1,14 @@
+{
+  "source": "original user-provided historical project assets, private validation",
+  "tested_engine": "python-opencv V0.3.1 unchanged in V0.3.2",
+  "frames_read": 961,
+  "frames_analyzed": 161,
+  "moves": 41,
+  "winner": "Black",
+  "matches_legacy_41_move_csv": true,
+  "wall_seconds_observed": 7.056,
+  "historical_csharp_engine_tested_on_windows": false,
+  "wpf_v032_original_import_windows_tested": false,
+  "accuracy_note": "Agreement with old CSV, not independently annotated accuracy",
+  "original_video_or_raw_templates_in_public_zip": false
+}

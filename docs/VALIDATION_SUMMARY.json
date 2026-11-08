@@ -1,0 +1,67 @@
+{
+  "project": "GomokuVision Advanced V0.2.4",
+  "run_date": "2026-11-08",
+  "test_environment": "Linux / Python 3.13.5; no Windows WPF environment; .NET SDK unavailable",
+  "python_pytest": {
+    "passed": 14,
+    "failed": 0,
+    "executed_this_turn": true
+  },
+  "original_video": {
+    "source_frames_read": 961,
+    "analyzed_frames": 161,
+    "frames_written": 161,
+    "moves": 41,
+    "black_moves": 21,
+    "white_moves": 20,
+    "winner": "Black",
+    "wall_seconds": 7.437,
+    "full_scans": 43,
+    "local_scans": 116,
+    "scanned_cells": 25376,
+    "match_attempts": 17601
+  },
+  "historical_csv_parity": {
+    "match": true,
+    "matches": 41,
+    "total": 41,
+    "comparison": "color, position and move order after whitespace normalization",
+    "ground_truth": "previous project output, not independent human ground truth"
+  },
+  "csharp_cli": {
+    "compiled": false,
+    "passed": null,
+    "reason": "dotnet SDK absent"
+  },
+  "windows_wpf": {
+    "compiled": false,
+    "runtime_started": false,
+    "reason": "Windows and dotnet SDK absent; launcher was statically inspected and improved"
+  },
+  "cached_results": {
+    "path": "results/verified_historical",
+    "copied_files": [
+      "moves.csv",
+      "moves_legacy.csv",
+      "board_final.png",
+      "summary.json"
+    ],
+    "third_party_video_included": false,
+    "derived_raw_frames_included": false
+  },
+  "offline_results_viewer": "docs/VerifiedResults.html",
+  "tests_not_requiring_user_to_reprocess_original_video": true,
+  "license": "No third-party footage included; original MATLAB ownership must be verified before public release",
+  "v024": {
+    "python_tests_status": "PASS",
+    "python_synthetic_owned_video": {
+      "moves": 9,
+      "winner": "Black",
+      "frames_analyzed": 29
+    },
+    "csharp_v024_windows_build": "NOT_EXECUTED",
+    "wpf_v024_gui": "NOT_EXECUTED",
+    "v023_user_windows_wpf_gui": "SCREENSHOT_CONFIRMED",
+    "historical_961_frame_reanalysis": "NOT_EXECUTED"
+  }
+}

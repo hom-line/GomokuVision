@@ -1,0 +1,13 @@
+﻿playback_speed,engine,roi_mode,overlay_mode,status,oracle_verified,elapsed_wall_seconds,engine_wall_seconds,frames_read,frames_analyzed,moves,winner,match_attempts,expected_playback_seconds,playback_model_verified
+1,python,separated,recognition,PASS,PASS,4.107,3.14,961,161,41,Black,25458,32.033,PASS
+1,python,separated,recognition_prediction,PASS,PASS,5.286,4.357,961,161,41,Black,25458,32.033,PASS
+1,python,shared,recognition,PASS,PASS,5.79,4.865,961,161,41,Black,50916,32.033,PASS
+1,python,shared,recognition_prediction,PASS,PASS,6.385,5.594,961,161,41,Black,50916,32.033,PASS
+2,python,separated,recognition,PASS,PASS,4.0,3.202,961,161,41,Black,25458,16.017,PASS
+2,python,separated,recognition_prediction,PASS,PASS,4.831,4.027,961,161,41,Black,25458,16.017,PASS
+2,python,shared,recognition,PASS,PASS,5.583,4.76,961,161,41,Black,50916,16.017,PASS
+2,python,shared,recognition_prediction,PASS,PASS,7.098,6.229,961,161,41,Black,50916,16.017,PASS
+4,python,separated,recognition,PASS,PASS,4.129,3.284,961,161,41,Black,25458,8.008,PASS
+4,python,separated,recognition_prediction,PASS,PASS,5.333,4.481,961,161,41,Black,25458,8.008,PASS
+4,python,shared,recognition,PASS,PASS,4.941,4.185,961,161,41,Black,50916,8.008,PASS
+4,python,shared,recognition_prediction,PASS,PASS,6.147,5.37,961,161,41,Black,50916,8.008,PASS

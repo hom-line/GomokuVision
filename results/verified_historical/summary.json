@@ -1,0 +1,70 @@
+{
+  "engine": "python-opencv",
+  "input": "historical_input.mp4 (not distributed; third-party footage)",
+  "sampling_every": 6,
+  "full_scan_every_processed_frames": 4,
+  "scale": 0.5,
+  "input_fps": 30.03156,
+  "output_fps": 5.00526,
+  "frames_read": 961,
+  "frames_analyzed": 161,
+  "frames_written": 161,
+  "canceled": false,
+  "wall_seconds": 7.437,
+  "scanned_cells": 25376,
+  "match_attempts": 17601,
+  "full_scans": 43,
+  "local_scans": 116,
+  "accuracy_note": "No accuracy claimed without independently labeled ground truth.",
+  "winner": "Black",
+  "moves": 41,
+  "black_moves": 21,
+  "white_moves": 20,
+  "black_suggestions": [
+    {
+      "position": "M7",
+      "score": 10000000.0
+    },
+    {
+      "position": "E8",
+      "score": 113940.0
+    },
+    {
+      "position": "C7",
+      "score": 108000.0
+    },
+    {
+      "position": "E6",
+      "score": 101000
+    },
+    {
+      "position": "G4",
+      "score": 100000
+    }
+  ],
+  "white_suggestions": [
+    {
+      "position": "M7",
+      "score": 5000000.0
+    },
+    {
+      "position": "E6",
+      "score": 109080.0
+    },
+    {
+      "position": "G4",
+      "score": 108000.0
+    },
+    {
+      "position": "E8",
+      "score": 105500
+    },
+    {
+      "position": "C7",
+      "score": 100000
+    }
+  ],
+  "verified_against": "data/legacy_moves_reference.csv",
+  "reference_type": "Original project output CSV, not independently labeled ground truth",
+  "original_video_redistributed": false
+}

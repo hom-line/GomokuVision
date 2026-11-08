@@ -1,0 +1,45 @@
+{
+  "project": "GomokuVision Advanced V0.3.4",
+  "date": "2026-11-08",
+  "status": "SOURCE_AND_PYTHON_TESTED_WINDOWS_WPF_AND_MATLAB_PENDING",
+  "source_video": {
+    "frames": 961,
+    "fps": 30.0,
+    "sha256": "0518c8f5e0627e396ca1e4d5a9e0ff687008f8c90efe0b9ac91875c29c594641",
+    "independently_authored": true
+  },
+  "synced_double_speed_movie": {
+    "frames": 961,
+    "fps": 60.0,
+    "sha256": "dcaf2f52e04c7cf6958fc9f693a4dd6695787d4c1170076064206bf2f771c84b",
+    "duration_sec": 16.0167,
+    "last_frame_has_left_and_right_winning_line": true
+  },
+  "python_tests": {
+    "status": "PASS",
+    "count": 57
+  },
+  "python_complete_961_frame_synthetic_recognition": {
+    "status": "PASS",
+    "read_frames": 961,
+    "sampled_frames": 161,
+    "moves": 41,
+    "winner": "Black",
+    "matches_41_move_synthetic_oracle": true,
+    "confirmation_delay_frames": 6,
+    "wall_seconds_local": 4.711
+  },
+  "matlab_fix": {
+    "table_Row_name_conflict": "FIXED_IN_SOURCE_DIMENSION_NAMES",
+    "photometric_candidate_prefilter": "IMPLEMENTED_SOURCE_ONLY",
+    "native_MATLAB_compilation_and_runtime": "NOT_EXECUTED_NO_LICENSED_MATLAB_HERE",
+    "speedup": "NOT_MEASURED"
+  },
+  "csharp_wpf": {
+    "v034_build": "NOT_EXECUTED_NO_DOTNET_WINDOWS_SDK_HERE",
+    "live_gui": "NOT_WINDOWS_RUNTIME_VERIFIED",
+    "old_v026_windows_synthetic_gate": "PREVIOUS_VERSION_ONLY"
+  },
+  "original_third_party_video_included": false,
+  "notes": "Source static tests cannot substitute for native C# GUI and MATLAB verification. Real footage accuracy is not claimed."
+}

@@ -1,0 +1,13 @@
+﻿source_screenshot,engine,roi_mode,overlay_mode,displayed_elapsed_seconds,frames_analyzed,moves,winner,video_playback_speed,evidence_type
+image(20261108-114502).png,csharp,separated,recognition,3.15,161,41,Black,1x,user_screenshot_single_run
+image(20261108-114523).png,csharp,shared,recognition,2.43,161,41,Black,1x,user_screenshot_single_run
+image(20261108-114537).png,csharp,separated,recognition_prediction,2.16,161,41,Black,1x,user_screenshot_single_run
+image(20261108-114547).png,csharp,shared,recognition_prediction,2.16,161,41,Black,1x,user_screenshot_single_run
+image(20261108-114604).png,python,separated,recognition_prediction,3.57,161,41,Black,1x,user_screenshot_single_run
+image(20261108-114622).png,python,shared,recognition_prediction,4.26,161,41,Black,1x,user_screenshot_single_run
+image(20261108-114654).png,python,shared,recognition,3.35,161,41,Black,1x,user_screenshot_single_run
+image(20261108-114738).png,matlab,separated,recognition,6.26,161,41,Black,1x,user_screenshot_single_run
+image(20261108-114822).png,matlab,shared,recognition,5.91,161,41,Black,1x,user_screenshot_single_run
+image(20261108-114900).png,matlab,separated,recognition_prediction,12.16,161,41,Black,1x,user_screenshot_single_run
+image(20261108-114944).png,matlab,shared,recognition_prediction,13.09,161,41,Black,1x,user_screenshot_single_run
+NOT_PROVIDED,python,separated,recognition,,,,,1x,missing_screen_capture

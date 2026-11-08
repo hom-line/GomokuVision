@@ -1,0 +1,43 @@
+{
+  "project": "GomokuVision Advanced V0.3.6",
+  "date": "2026-11-08",
+  "status": "PYTHON_AND_SYNTHETIC_VIDEO_VERIFIED_WINDOWS_CSHARP_WPF_MATLAB_PENDING",
+  "original_third_party_video_reprocessed": false,
+  "original_third_party_video_included": false,
+  "python_tests": {
+    "status": "PASS",
+    "count": 64,
+    "includes_roi_modes_and_green_boxes": true
+  },
+  "python_full_961_by_roi_mode": {
+    "separated": {
+      "moves": 41,
+      "winner": "Black",
+      "frames_read": 961,
+      "frames_analyzed": 161,
+      "match_attempts": 25458,
+      "wall_seconds": 4.082
+    },
+    "shared": {
+      "moves": 41,
+      "winner": "Black",
+      "frames_read": 961,
+      "frames_analyzed": 161,
+      "match_attempts": 50916,
+      "wall_seconds": 5.419
+    }
+  },
+  "recognition_oracle_note": "41/41 refers to self-authored synthetic sequence, not independently labeled real footage.",
+  "side_by_side_green_videos": {
+    "recognition": "demo/full_game/full_game_recognition_green_961_2x.mp4",
+    "recognition_prediction": "demo/full_game/full_game_recognition_prediction_green_961_2x.mp4",
+    "frames": 961,
+    "fps": 60,
+    "terminal_frame_has_green_boxes": true,
+    "ground_truth_demo_not_inference": true
+  },
+  "csharp_core_and_wpf_build": "PENDING_WINDOWS_RUNTIME",
+  "matlab_native_runtime": "PENDING_LICENSED_MATLAB",
+  "three_engine_mode_parity": "PENDING_NATIVE_GATES",
+  "notes": "New source contracts and WPF XAML XML inspected. Native builds not available in this environment."
+}

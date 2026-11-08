@@ -1,0 +1,47 @@
+# Never publish the original third-party footage, personal inputs or local outputs.
+*.mp4
+!demo/demo.mp4
+!demo/full_game/full_game_961_web.mp4
+*.mov
+*.avi
+*.mkv
+*.rar
+*.zip
+
+# Only vetted, small replay/oracle snapshots belong in Git.
+results/*
+!results/verified_historical/
+results/verified_historical/*
+!results/verified_historical/README.txt
+!results/verified_historical/moves.csv
+!results/verified_historical/moves_legacy.csv
+!results/verified_historical/summary.json
+!results/verified_historical/board_final.png
+!results/full_game_demo/
+results/full_game_demo/*
+!results/full_game_demo/moves.csv
+!results/full_game_demo/summary.json
+!results/full_game_demo/board_final.png
+
+_private*/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+*.egg-info/
+**/bin/
+**/obj/
+.vs/
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+.logs/
+
+# Keep unreviewed historical course sources out of this release
+matlab/legacy/
+# Do not accidentally commit credentials
+.env
+.env.*
+*.pem
+*.pfx

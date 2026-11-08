@@ -1,0 +1,66 @@
+{
+  "engine": "synthetic-oracle",
+  "input": "demo/full_game/full_game_961.mp4",
+  "sampling_every": 6,
+  "full_scan_every_processed_frames": 4,
+  "scale": 0.5,
+  "frames_read": 961,
+  "canceled": false,
+  "winner": "Black",
+  "moves": 41,
+  "black_moves": 21,
+  "white_moves": 20,
+  "black_suggestions": [
+    {
+      "position": "M7",
+      "score": 10000000.0
+    },
+    {
+      "position": "E8",
+      "score": 113940.0
+    },
+    {
+      "position": "C7",
+      "score": 108000.0
+    },
+    {
+      "position": "E6",
+      "score": 101000
+    },
+    {
+      "position": "G4",
+      "score": 100000
+    }
+  ],
+  "white_suggestions": [
+    {
+      "position": "M7",
+      "score": 5000000.0
+    },
+    {
+      "position": "E6",
+      "score": 109080.0
+    },
+    {
+      "position": "G4",
+      "score": 108000.0
+    },
+    {
+      "position": "E8",
+      "score": 105500
+    },
+    {
+      "position": "C7",
+      "score": 100000
+    }
+  ],
+  "video_sha256": "0518c8f5e0627e396ca1e4d5a9e0ff687008f8c90efe0b9ac91875c29c594641",
+  "moves_sha256": "e61a6da9a5808c7b22e7aa80a3eb9b1c20fd2ac89b187c7d2b822be934c6c5f0",
+  "fps": 30,
+  "playback_speed_default": 2,
+  "duration_at_1x_sec": 32.03333333333333,
+  "duration_at_2x_sec": 16.016666666666666,
+  "reference_type": "Self-authored synthetic footage mapped to historical 41 move sequence",
+  "accuracy_note": "Oracle timeline of synthetic movie; NOT model inference, and NOT historical video evidence.",
+  "original_video_redistributed": false
+}

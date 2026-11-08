@@ -1,0 +1,25 @@
+{
+  "input_sha256": "0518c8f5e0627e396ca1e4d5a9e0ff687008f8c90efe0b9ac91875c29c594641",
+  "synthetic_oracle_applicable": true,
+  "playback_speed_affects_compute_time": false,
+  "selected_playback_speeds": [
+    1,
+    2,
+    4
+  ],
+  "timing_methodology": {
+    "recognition_seconds": "Sum of each detect/confirm call and move placement; excludes video decode, rendering, encoding, app startup",
+    "engine_wall_seconds": "Engine-owned in-process timer around video processing; includes I/O and overlay",
+    "elapsed_wall_seconds": "External benchmark wall clock for each child process, includes interpreter / MATLAB startup",
+    "external_overhead_seconds": "elapsed_wall_seconds minus engine_wall_seconds; includes process startup, initialization, shutdown and final output, not startup alone",
+    "playback_speed": "Replay label only, not a computational speed setting"
+  },
+  "source_fps": 30.0,
+  "source_frames": 961,
+  "playback_validation": "Mathematical replay endpoint model only; NOT a WPF GUI playback runtime test",
+  "cases": 36,
+  "pass": 36,
+  "note": "Each selected playback speed repeats the 12 independent computational cases. Speed is metadata, NOT an engine acceleration setting; real GUI playback needs separate manual acceptance. Synthetic oracle is not real-world accuracy.",
+  "source": "Windows verification supplied by repository maintainer on 2026-11-08",
+  "data_file": "windows_v039_36_case_results_2026-11-08.csv"
+}

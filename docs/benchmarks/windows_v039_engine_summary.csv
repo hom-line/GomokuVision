@@ -1,0 +1,4 @@
+engine,runs,all_pass,recognition_mean_seconds,pipeline_mean_seconds,process_mean_seconds,external_overhead_mean_seconds,ncc_attempts_mean
+csharp,12,True,1.0104,1.8206,1.9292,0.1086,38187.0
+python,12,True,1.3774,2.8305,2.9876,0.1571,38187.0
+matlab,12,True,1.363,8.9092,21.8894,12.9802,762.0

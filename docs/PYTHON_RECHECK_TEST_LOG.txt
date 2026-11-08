@@ -1,0 +1,13 @@
+..............                                                           [100%]
+14 passed in 1.21s
+
+Original video end-to-end log:
+Analyzed 25 frames; moves=6
+Analyzed 50 frames; moves=13
+Analyzed 75 frames; moves=19
+Analyzed 100 frames; moves=26
+Analyzed 125 frames; moves=31
+Analyzed 150 frames; moves=38
+Done: 41 moves, 161 analyzed frames -> /mnt/data/_gomoku_recheck_20261108/historical
+
+41/41 color-position-order parity: PASS (legacy CSV, not independently labeled ground truth).

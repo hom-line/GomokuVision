@@ -1,0 +1,31 @@
+{
+  "project": "GomokuVision Advanced V0.3.5",
+  "date": "2026-11-08",
+  "status": "PYTHON_AND_SOURCE_TESTED_WINDOWS_CSHARP_WPF_MATLAB_PENDING",
+  "root_cause": "Sharing violation when replacing live last_frame.png in Python / MATLAB, while WPF may read same path",
+  "fix": "Run-unique immutable preview PNG paths; WPF FileShare.Delete; bounded JSON retry",
+  "python_tests": {
+    "status": "PASS",
+    "count": 61,
+    "windows_permission_lock_emulation": true
+  },
+  "python_full_synthetic_961": {
+    "status": "PASS",
+    "source_frames": 961,
+    "analyzed_frames": 161,
+    "moves": 41,
+    "winner": "Black",
+    "synthetic_move_color_position_oracle_match": "41/41",
+    "preview_snapshots": 70,
+    "last_frame": "frame_000961.png",
+    "wall_seconds_this_environment": 4.872
+  },
+  "source_video_sha256": "0518c8f5e0627e396ca1e4d5a9e0ff687008f8c90efe0b9ac91875c29c594641",
+  "side_by_side_video_sha256": "dcaf2f52e04c7cf6958fc9f693a4dd6695787d4c1170076064206bf2f771c84b",
+  "original_third_party_video_reprocessed": false,
+  "original_third_party_video_included": false,
+  "csharp_new_windows_build": "PENDING",
+  "matlab_native_runtime": "PENDING",
+  "wpf_live_three_engine_acceptance": "PENDING",
+  "notes": "No claim of MATLAB native pass, Windows GUI pass or general real-video accuracy."
+}

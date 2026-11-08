@@ -1,0 +1,28 @@
+<Window x:Class="GomokuVision.Desktop.CalibrationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Calibration" Width="980" Height="825" MinWidth="740" MinHeight="620"
+        WindowStartupLocation="CenterOwner" Background="#F1F5FA">
+  <Grid Margin="17">
+    <Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="*"/><RowDefinition Height="48"/></Grid.RowDefinitions>
+    <StackPanel Grid.Row="0" Margin="0,0,0,12">
+      <TextBlock x:Name="Instructions" Text="依序點選外圍四個交叉點：左上 → 右上 → 左下 → 右下" FontSize="17" FontWeight="SemiBold"/>
+      <TextBlock x:Name="ProgressLabel" Text="0/4 points" Foreground="#1976D2" Margin="0,5,0,0"/>
+    </StackPanel>
+    <Border Grid.Row="1" Background="#1F2935" CornerRadius="9" ClipToBounds="True">
+      <Grid x:Name="CanvasArea">
+        <Image x:Name="FrameImage" Stretch="Uniform" MouseLeftButtonDown="FrameImage_MouseLeftButtonDown"/>
+        <Canvas x:Name="Markers" IsHitTestVisible="False"/>
+      </Grid>
+    </Border>
+    <DockPanel Grid.Row="2" Margin="0,10,0,0">
+      <Button x:Name="SaveButton" Content="儲存 CSV" DockPanel.Dock="Right" IsEnabled="False" Click="Save_Click"/>
+      <Button x:Name="ResetButton" Content="重設" DockPanel.Dock="Right" Click="Reset_Click"
+              Style="{StaticResource SecondaryButton}"/>
+      <Button x:Name="UndoButton" Content="撤銷上一點" DockPanel.Dock="Right" IsEnabled="False"
+              Click="Undo_Click" Style="{StaticResource SecondaryButton}"/>
+      <TextBlock x:Name="Note" Text="四個點必須是 15×15 棋盤最外圈交叉點，不是木板邊角。"
+                 VerticalAlignment="Center" Foreground="#66788B" TextWrapping="Wrap"/>
+    </DockPanel>
+  </Grid>
+</Window>

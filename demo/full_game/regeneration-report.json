@@ -1,0 +1,10 @@
+{
+  "frame_count": 961,
+  "fps": 30,
+  "duration_at_2x": 16.017,
+  "known_move_count": 41,
+  "source": "fully synthetic 15x15 game",
+  "video_sha256": "0518c8f5e0627e396ca1e4d5a9e0ff687008f8c90efe0b9ac91875c29c594641",
+  "synchronized_video_sha256": "dcaf2f52e04c7cf6958fc9f693a4dd6695787d4c1170076064206bf2f771c84b",
+  "synchronized_video_fps": 60
+}

@@ -1,0 +1,20 @@
+{
+  "version": "0.3.7",
+  "python_source_and_contract_tests": "66/66 PASS",
+  "benchmark_runner_python_short_demo": "4/4 PASS",
+  "win_csharp_and_wpf_build": "PENDING WINDOWS",
+  "matlab_native": "PENDING LICENSED MATLAB",
+  "roi_green_frame_fix": "MATLAB THICKER SOURCE VERIFIED; native visual pending",
+  "prior_961_synthetic_reference_preserved": true,
+  "historical_third_party_video_included": false,
+  "python_full961_benchmark": {
+    "status": "PASS",
+    "cases": 4,
+    "oracle_verified": 4,
+    "frames_read": 961,
+    "frames_analyzed": 161,
+    "moves": 41,
+    "winner": "Black",
+    "note": "Python only; not comparable to Windows user device timing"
+  }
+}

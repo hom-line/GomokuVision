@@ -1,0 +1,26 @@
+{
+  "project": "GomokuVision Advanced",
+  "version": "0.3.1",
+  "date": "2026-11-08",
+  "change_scope": "WPF layout and test/documentation only",
+  "python_source_tests": {
+    "passed": 39,
+    "failed": 0,
+    "new_v031_contract_tests": 6
+  },
+  "xaml_xml_parse": "PASS",
+  "wpf_xaml_source_contract": "PASS",
+  "historical_961_frame_video_reprocessed": false,
+  "vision_core_changed": false,
+  "history_41_move_files_changed": false,
+  "prior_user_evidence": {
+    "version": "0.3.0",
+    "wpf_window_opened_in_screenshot": true,
+    "gui_full_acceptance": false
+  },
+  "windows_v031_wpf_build": "NOT_TESTED",
+  "windows_v031_wpf_layout_and_dpi": "NOT_TESTED",
+  "windows_v031_engine_gate": "NOT_TESTED",
+  "matlab_automated_cross_language_test": "NOT_IMPLEMENTED",
+  "github_uploaded": false
+}

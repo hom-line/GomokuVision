@@ -1,0 +1,27 @@
+{
+  "project": "GomokuVision Advanced",
+  "version": "0.3.2",
+  "date": "2026-11-08",
+  "python_and_static_source_tests": {
+    "passed": 44,
+    "failed": 0
+  },
+  "xaml_xml_parse": "PASS",
+  "original_historical_video_python_recheck": {
+    "frames_read": 961,
+    "frames_analyzed": 161,
+    "moves": 41,
+    "winner": "Black",
+    "legacy_move_sequence_and_colors_agree": true,
+    "not_independent_ground_truth_accuracy": true
+  },
+  "protected_algorithm_and_reference_files_unchanged": true,
+  "original_third_party_video_in_zip": false,
+  "original_extracted_templates_in_zip": false,
+  "new_wpf_import_windows_build": "NOT_TESTED",
+  "new_wpf_video_sync_windows_runtime": "NOT_TESTED",
+  "prior_windows_v031_layout_launch": "USER_SCREENSHOT_VISIBLE",
+  "prior_v026_synthetic_dual_engine_gate": "USER_WINDOWS_PASS",
+  "matlab_automated_cross_language_test": "NOT_IMPLEMENTED",
+  "github_uploaded": false
+}
