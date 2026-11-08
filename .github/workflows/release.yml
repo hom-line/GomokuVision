@@ -18,12 +18,6 @@ jobs:
         with:
           ref: main
           fetch-depth: 1
-      - name: Confirm tested commit is current
-        if: github.event_name == 'workflow_run'
-        env:
-          CI_SHA: ${{ github.event.workflow_run.head_sha }}
-        run: |
-          test "$(git rev-parse HEAD)" = "$CI_SHA" || { echo "CI commit no longer matches main"; exit 1; }
       - name: Check the existing Release and attachments
         id: existing
         env:
@@ -37,6 +31,12 @@ jobs:
           else
             echo "skip=false" >> "$GITHUB_OUTPUT"
           fi
+      - name: Confirm tested commit is current
+        if: github.event_name == 'workflow_run' && steps.existing.outputs.skip != 'true'
+        env:
+          CI_SHA: ${{ github.event.workflow_run.head_sha }}
+        run: |
+          test "$(git rev-parse HEAD)" = "$CI_SHA" || { echo "CI commit no longer matches main"; exit 1; }
       - name: Restore synthetic demo videos and verify their SHA-256
         if: steps.existing.outputs.skip != 'true'
         run: python3 python/tools/restore_demo_videos.py --verify
