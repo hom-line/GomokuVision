@@ -12,9 +12,9 @@
 
 ## 📖 About / 專案簡介
 
-**EN** — GomokuVision started as a **2025 university final course assignment**, *Design and Implementation of a Real-Time Gomoku Board Recognition and Prediction System*. In **November 2026**, the original MATLAB-based concept was modernized into a three-language computer vision project with a Windows desktop interface, synchronized replay, heuristic move prediction and automated benchmarks.
+GomokuVision started as a **2025 university final course assignment**, *Design and Implementation of a Real-Time Gomoku Board Recognition and Prediction System*. In **November 2026**, the original MATLAB-based concept was modernized into a three-language computer vision project with a Windows desktop interface, synchronized replay, heuristic move prediction and automated benchmarks.
 
-**繁中** — GomokuVision 起源於 **2025 年大學課程期末作業**「即時五子棋棋盤辨識與預測系統之設計與實現」。於 **2026 年 11 月**，以原 MATLAB 專題概念為基礎，升級為三語言電腦視覺專案，加入 Windows 桌面介面、影音棋盤同步、落點預測與自動化效能比較。
+GomokuVision 起源於 **2025 年大學課程期末作業**「即時五子棋棋盤辨識與預測系統之設計與實現」。於 **2026 年 11 月**，以原 MATLAB 專題概念為基礎，升級為三語言電腦視覺專案，加入 Windows 桌面介面、影音棋盤同步、落點預測與自動化效能比較。
 
 **Purpose / 專案定位：** Education · Technical Sharing · Reproducible Engineering / 教育學習、開源技術交流與可重現的工程實驗。
 
@@ -40,9 +40,9 @@
 - [**GomokuVision_v0.3.9_Source.zip**](https://github.com/hom-line/GomokuVision/releases/download/GomokuVision/GomokuVision_v0.3.9_Source.zip) — Full source package / 完整原始碼與自製展示素材。
 - [**SHA256_GomokuVision_v0.3.9.txt**](https://github.com/hom-line/GomokuVision/releases/download/GomokuVision/SHA256_GomokuVision_v0.3.9.txt) — Download integrity check / 下載完整性校驗。
 
-**EN** — The repository is named **GomokuVision**; `v0.3.9` identifies the initial source-release version. This is a **source-code distribution**, not a prebuilt standalone Windows EXE.
+The repository is named **GomokuVision**; `v0.3.9` identifies the initial source-release version. This is a **source-code distribution**, not a prebuilt standalone Windows EXE.
 
-**繁中** — 專案名稱維持 **GomokuVision**；`v0.3.9` 僅是首次發布版號。本次提供的是**原始碼版本**，不是免安裝的 Windows EXE。
+專案名稱維持 **GomokuVision**；`v0.3.9` 僅是首次發布版號。本次提供的是**原始碼版本**，不是免安裝的 Windows EXE。
 
 ## 🚀 Quick Start / 快速開始
 
@@ -62,7 +62,7 @@ python -m pip install -r python/requirements.txt
 python python/tools/restore_demo_videos.py --verify
 ~~~
 
-**EN** — Four self-generated MP4 files are stored as lossless `.mp4.xz` archives. The restore tool checks SHA-256 and reconstructs the exact demo video files. / **繁中** — 四支自製 MP4 以無損 `.mp4.xz` 封存，可經 SHA-256 驗證後還原為原始影片。
+Four self-generated MP4 files are stored as lossless `.mp4.xz` archives. The restore tool checks SHA-256 and reconstructs the exact demo video files. / 四支自製 MP4 以無損 `.mp4.xz` 封存，可經 SHA-256 驗證後還原為原始影片。
 
 **3. Build and launch WPF / 建置並啟動 Windows 桌面版**
 
@@ -77,7 +77,7 @@ python python/tools/restore_demo_videos.py --verify
 .\scripts\Run-Selected-Speeds-Windows.bat 1 2 4
 ~~~
 
-**EN** — Choose the recognition engine, ROI strategy and display mode in WPF, or run 1×/2×/4× benchmark groups and export CSV/JSON. **繁中** — 在 WPF 選擇引擎、ROI 與顯示模式；亦可勾選不同倍率的測試組合，匯出 CSV／JSON。
+Choose the recognition engine, ROI strategy and display mode in WPF, or run 1×/2×/4× benchmark groups and export CSV/JSON. 在 WPF 選擇引擎、ROI 與顯示模式；亦可勾選不同倍率的測試組合，匯出 CSV／JSON。
 
 ## 🌐 Web Replay / 網頁棋譜重播
 
@@ -94,9 +94,9 @@ The web-friendly H.264 `demo/full_game/full_game_961_web.mp4` follows the same 9
 
 **Windows acceptance / Windows 驗收：2026-11-08 — 36/36 PASS (0 failed, 0 skipped).**
 
-**EN** — Each test uses the **same self-generated 961-frame video**, processes 161 sampled frames and matches all **41 reference moves**, with Black winning. The 36 settings are **3 engines × 2 ROI modes × 2 overlay modes × 3 playback labels**.
+Each test uses the **same self-generated 961-frame video**, processes 161 sampled frames and matches all **41 reference moves**, with Black winning. The 36 settings are **3 engines × 2 ROI modes × 2 overlay modes × 3 playback labels**.
 
-**繁中** — 36 組設定皆使用**同一支自行生成的 961 幀影片**，分析 161 個取樣影格，符合 **41/41 手參考棋譜**、黑棋獲勝。測試矩陣為三引擎 × 兩種 ROI × 兩種顯示模式 × 三種播放倍率標籤。
+36 組設定皆使用**同一支自行生成的 961 幀影片**，分析 161 個取樣影格，符合 **41/41 手參考棋譜**、黑棋獲勝。測試矩陣為三引擎 × 兩種 ROI × 兩種顯示模式 × 三種播放倍率標籤。
 
 | Engine / 引擎 | Recognition core / 核心辨識 | In-process pipeline / 引擎內處理 | Full process / 完整程序 |
 | --- | ---: | ---: | ---: |
@@ -134,7 +134,7 @@ $env:PYTHONPATH = "python"
 python -m pytest -q python/tests
 ~~~
 
-**EN** — GitHub Actions checks Python and Windows functionality; see [CI runs](https://github.com/hom-line/GomokuVision/actions) for the latest results. **繁中** — GitHub Actions 執行 Python 與 Windows 自動化測試，最新狀態請以 [Actions 頁面](https://github.com/hom-line/GomokuVision/actions) 為準。
+GitHub Actions checks Python and Windows functionality; see [CI runs](https://github.com/hom-line/GomokuVision/actions) for the latest results. GitHub Actions 執行 Python 與 Windows 自動化測試，最新狀態請以 [Actions 頁面](https://github.com/hom-line/GomokuVision/actions) 為準。
 
 ## 🗺️ History & Roadmap / 專案歷程與規劃
 
@@ -147,9 +147,9 @@ python -m pytest -q python/tests
 
 ## ⚖️ License / 授權與聲明
 
-**EN** — The author's modern MATLAB/Python/C# source and self-generated demo assets are published under the [MIT License](LICENSE). MATLAB and its toolboxes are proprietary and require separate licenses; other dependencies retain their upstream terms ([Third-party Notices](THIRD_PARTY_NOTICES.md)). The historical 2025 MATLAB coursework files and original third-party footage are **not included**.
+The author's modern MATLAB/Python/C# source and self-generated demo assets are published under the [MIT License](LICENSE). MATLAB and its toolboxes are proprietary and require separate licenses; other dependencies retain their upstream terms ([Third-party Notices](THIRD_PARTY_NOTICES.md)). The historical 2025 MATLAB coursework files and original third-party footage are **not included**.
 
-**繁中** — 現代版 MATLAB／Python／C# 原始碼與自製合成素材採用 [MIT License](LICENSE) 開源。MATLAB 及其工具箱仍屬專有軟體，須另行取得授權；第三方依賴遵循各自條款（詳見[第三方授權聲明](THIRD_PARTY_NOTICES.md)）。**2025 年歷史課程 MATLAB 原始檔與原始第三方影片並未納入公開版本**。
+現代版 MATLAB／Python／C# 原始碼與自製合成素材採用 [MIT License](LICENSE) 開源。MATLAB 及其工具箱仍屬專有軟體，須另行取得授權；第三方依賴遵循各自條款（詳見[第三方授權聲明](THIRD_PARTY_NOTICES.md)）。**2025 年歷史課程 MATLAB 原始檔與原始第三方影片並未納入公開版本**。
 
 ---
 
