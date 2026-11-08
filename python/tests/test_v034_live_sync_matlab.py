@@ -49,7 +49,7 @@ def test_live_python_progress_contains_every_confirmed_move(tmp_path):
     out=run(args)
     assert out['moves']==9 and out['winner']=='Black'
     assert out['confirmation_delay_frames']==6
-    state=json.loads(progress.read_text())
+    state=json.loads(progress.read_text(encoding='utf-8'))
     assert state['moves']==9 and len(state['move_records'])==9
     assert state['move_records'][0]['color']==1
     assert state['move_records'][-1]['color']==1
@@ -59,8 +59,8 @@ def test_live_python_progress_contains_every_confirmed_move(tmp_path):
 
 
 def test_csharp_and_wpf_use_live_snapshot_not_wait_for_completed_csv():
-    core=(ROOT/'csharp/GomokuVision/Program.cs').read_text()
-    gui=(ROOT/'csharp/GomokuVision.Desktop/MainWindow.xaml.cs').read_text()
+    core=(ROOT/'csharp/GomokuVision/Program.cs').read_text(encoding='utf-8')
+    gui=(ROOT/'csharp/GomokuVision.Desktop/MainWindow.xaml.cs').read_text(encoding='utf-8')
     assert 'board.Moves.ToArray()' in core
     assert 'IReadOnlyList<Move>? MoveSnapshot' in core
     assert 'ApplyLiveMoves(value.MoveSnapshot)' in gui
@@ -72,7 +72,7 @@ def test_csharp_and_wpf_use_live_snapshot_not_wait_for_completed_csv():
 
 
 def test_matlab_export_row_conflict_fixed_and_matlab_progress_is_incremental():
-    m=(ROOT/'matlab/modern/gomoku_batch.m').read_text()
+    m=(ROOT/'matlab/modern/gomoku_batch.m').read_text(encoding='utf-8')
     assert "'VariableNames'," in m
     assert "'DimensionNames',{'MoveRecords','Variables'}" in m
     assert 'lastProgressMoves' in m
@@ -81,13 +81,13 @@ def test_matlab_export_row_conflict_fixed_and_matlab_progress_is_incremental():
     assert 'imwrite(annotated,lastPreview)' in m
     assert 'previewDir=tempname(previewRoot)' in m
     assert "movefile(tmpPreview,lastPreview,'f')" not in m
-    selftest=(ROOT/'matlab/modern/gomoku_selftest.m').read_text()
+    selftest=(ROOT/'matlab/modern/gomoku_selftest.m').read_text(encoding='utf-8')
     assert "'DimensionNames',{'MoveRecords','Variables'}" in selftest
 
 
 def test_dual_video_hash_keeps_original_source_unchanged():
     demo=ROOT/'demo/full_game'
-    manifest=json.loads((demo/'manifest.json').read_text())
+    manifest=json.loads((demo/'manifest.json').read_text(encoding='utf-8'))
     for name,key in [('full_game_961.mp4','video_sha256'),
                      ('full_game_synced_961_2x.mp4','side_by_side_2x_sha256')]:
         assert hashlib.sha256((demo/name).read_bytes()).hexdigest()==manifest[key]
