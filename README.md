@@ -88,8 +88,8 @@ GomokuVision 最初為 **2025 年大學課程期末作業**，題目為「即時
 
 ## 專案公開狀態
 
-**已發布專案介紹，但完整現代版原始碼、展示影片、Web Replay 及正式 Release 尚在公開審查與上傳階段。** 尚未完成開源授權選擇，不應稱為已正式採用 MIT 等授權。
+**專案介紹與 MIT License 已公開。完整現代版原始碼、展示影片、Web Replay 與正式 Release 尚待上傳；MIT 授權適用於作者自有作品，不包含第三方依賴或專有 MATLAB 執行環境。**
 
-2025 年歷史 MATLAB 原始檔及第三方影片會在確認相關權利後才考慮公開。專案標題僅使用 **GomokuVision**，規劃首次 Release Tag 為 `v0.3.9`。
+2025 年歷史 MATLAB 原始檔及第三方原始影片不包含在首次公開包內。專案標題僅使用 **GomokuVision**，規劃首次 Release Tag 為 `v0.3.9`。
 
 **維護者：** [hom-line](https://github.com/hom-line)
