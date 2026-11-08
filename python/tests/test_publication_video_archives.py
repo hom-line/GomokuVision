@@ -16,6 +16,10 @@ def test_archive_bytes_match_original_reference_video_sha():
 
 def test_readme_bilingual_single_file_and_browser_video():
     text=(ROOT/'README.md').read_text('utf8')
-    assert '## 繁體中文 / Traditional Chinese' in text
+    assert '## 📖 About / 專案簡介' in text
+    assert '## ✨ Features / 主要功能' in text
+    assert '2025 university final course assignment' in text
+    assert '2025 年大學課程期末作業' in text
+    assert 'README.md#繁體中文--traditional-chinese' not in (ROOT/'index.html').read_text(encoding='utf-8')
     assert not (ROOT/'README_zh_TW.md').exists()
     assert (VIDEOS/'full_game_961_web.mp4').is_file()
