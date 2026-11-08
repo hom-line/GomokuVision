@@ -37,9 +37,9 @@ These are averages of **one run per configuration**, not repeated independent be
 
 ## Publication and source status
 
-The **repository overview is published first**. Complete modern MATLAB, Python and C# sources, WPF, browser replay, demo files and the first GitHub Release remain **pending publication review and upload**. This public repository is not yet a completed open-source software distribution.
+The **repository overview, MIT License and third-party notices are online**. The complete modern MATLAB, Python and C# sources, WPF, browser replay and demo files are prepared but **not uploaded to this repository yet**. The first GitHub Release also remains pending; do not confuse license publication with completed code publication.
 
-Before uploading code, we will verify original-contributor redistribution rights, review third-party notices and select a suitable root license. The historical 2025 MATLAB source and third-party original footage are excluded until rights are established.
+The author has confirmed ownership of the modern project source and original synthetic assets and has approved the [MIT License](LICENSE). The modern source distribution is prepared for upload. Dependencies retain their own license terms ([third-party notices](THIRD_PARTY_NOTICES.md)). The historical 2025 MATLAB course source and original third-party footage are excluded.
 
 The repository and README title stay **GomokuVision**. The planned initial release tag is `v0.3.9`.
 
