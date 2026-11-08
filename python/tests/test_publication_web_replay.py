@@ -43,5 +43,5 @@ def test_public_package_does_not_include_2025_unreviewed_matlab_sources():
     assert not (ROOT/'matlab/legacy').exists()
     assert (ROOT/'matlab/modern/gomoku_batch.m').is_file()
     assert (ROOT/'README.md').read_text(encoding='utf-8').startswith('# GomokuVision')
-    assert (ROOT/'PUBLICATION_GATE.md').is_file()
+    assert (ROOT/'docs/releases/PUBLICATION_GATE.md').is_file()
     assert (ROOT/'LICENSE').read_text(encoding='utf-8').startswith('MIT License')
